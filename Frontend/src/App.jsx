@@ -4,8 +4,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Home from "./components/HomePage";
-import Login from "./components/LoginPage";
+import Home from "./js/pages/Home/index";
+import Login from "./js/pages/Login/index";
 import ProductDetails from "./components/ProductDetailsPage";
 
 function App() {

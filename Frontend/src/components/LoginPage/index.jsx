@@ -31,11 +31,90 @@ function Login() {
   };
 
   const handleFormData = (email, password) => {
-    if (email.includes("@") && email.includes(".")) {
+    email = email.toLowerCase();
+
+    if (
+      email[0] >= "a" &&
+      email[0] <= "z" &&
+      email[0] != ["1" - "9"] &&
+      email.includes("@") &&
+      email[email.indexOf("@") + 1] >= "a" &&
+      email[email.indexOf("@") + 1] <= "z" &&
+      email.includes(".") &&
+      email[email.indexOf(".") + 1] >= "a" &&
+      email[email.indexOf(".") + 1] <= "z"
+    ) {
       console.log(password.length);
-      if (password.length > 8) {
+      if (
+        password.length > 8 &&
+        password.includes(["A" - "Z"]) &&
+        password.includes(["a" - "z"]) &&
+        password.includes([1 - 9]) &&
+        password.includes(
+          "[" ||
+            "!" ||
+            "@" ||
+            "£" ||
+            "$" ||
+            "%" ||
+            "^" ||
+            "&" ||
+            "*" ||
+            "(" ||
+            ")" ||
+            "_" ||
+            "-" ||
+            "=" ||
+            "+" ||
+            "[" ||
+            "]" ||
+            "{" ||
+            "}" ||
+            "||" ||
+            "." ||
+            "/" ||
+            '"' ||
+            '"' ||
+            "*" ||
+            "`" ||
+            "~"
+        )
+      ) {
         handleLoginData(email, password);
       } else {
+        console.log(
+          password.includes([1 - 9]),
+          password.includes(
+            "[" ||
+              "!" ||
+              "@" ||
+              "£" ||
+              "$" ||
+              "%" ||
+              "^" ||
+              "&" ||
+              "*" ||
+              "(" ||
+              ")" ||
+              "_" ||
+              "-" ||
+              "=" ||
+              "+" ||
+              "[" ||
+              "]" ||
+              "{" ||
+              "}" ||
+              "||" ||
+              "." ||
+              "/" ||
+              '"' ||
+              '"' ||
+              "*" ||
+              "`" ||
+              "~"
+          )
+        );
+        console.log(password);
         alert("password must be atleast 8 letters");
       }
     } else {

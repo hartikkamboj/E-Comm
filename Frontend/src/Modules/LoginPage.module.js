@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Api } from "../Api/Api";
 
-const LoginDataHandler = async (email, password) => {
+const loginDataHandler = async (email, password) => {
   const result = await axios.post(Api.LoginUserDetailsSender, {
     email,
     password,
