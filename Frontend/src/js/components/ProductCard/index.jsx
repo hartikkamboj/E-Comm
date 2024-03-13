@@ -12,8 +12,8 @@ function ShopingSectionView({ Image, Name, Rating, Price }) {
             </div>
             <div>
               <h3>
-                {Rating}
-                <span className="text-xs text-gray-500">4.5/5</span>
+                rating
+                <span className="text-xs text-gray-500">{Rating}/5</span>
               </h3>
             </div>
             <div>

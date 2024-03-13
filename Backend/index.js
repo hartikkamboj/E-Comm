@@ -13,9 +13,6 @@ app.use(bodyParser.json());
 app.use("/", HomeRouter);
 // app.use("/", userVerifier, HomeRouter);
 
-app.get("/data", (req, res) => {
-  res.json(Products);
-});
 
 app.listen(3001, () => {
   console.log("started");

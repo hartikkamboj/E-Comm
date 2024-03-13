@@ -1,7 +1,7 @@
 const express = require("express");
 const HomeRouter = express.Router();
 const { userVerifier } = require("../middleWares/userVerifier");
-const { users } = require("../dummyData");
+const { users, Products } = require("../dummyData");
 const jwt = require("jsonwebtoken");
 const {
   tokenExtracter,
@@ -22,5 +22,9 @@ HomeRouter.get("/verify", tokenExtracter, tokenVerifier, (req, res) => {
   } else {
     res.send("not verified");
   }
+});
+
+HomeRouter.get("/data", (req, res) => {
+  res.json(Products);
 });
 module.exports = { HomeRouter };
