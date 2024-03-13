@@ -7,7 +7,7 @@ function CustomersReviewsView() {
   return (
     <>
       <div className="w-full flex p-6">
-        <div className=" w-2/5 flex justify-center p-4">
+        <div className=" w-2/5 flex justify-center p-4``">
           <h1 className="text-4xl font-black">OUR HAPPY CUSTOMERS </h1>
         </div>
         <div className="flex w-2/3 justify-end p-6">
