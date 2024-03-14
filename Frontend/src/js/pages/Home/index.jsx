@@ -5,6 +5,8 @@ import NewArrivals from "./Container/NewArrivals";
 import TopSelling from "./Container/TopSelling";
 import DressFilters from "./Container/DressFilters";
 import CustomersReviews from "./Container/CustomerReviews";
+import NewsLetterSubscriptionContainer from "./Container/NewsLetterSubscription";
+import FooterContainer from "./Container/Footer";
 // import HomeContainer from "./Container/index";
 
 function Home() {
@@ -17,6 +19,8 @@ function Home() {
       <TopSelling />
       <DressFilters />
       <CustomersReviews />
+      <NewsLetterSubscriptionContainer />
+      <FooterContainer />
     </div>
   );
 }

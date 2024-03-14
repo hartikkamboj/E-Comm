@@ -4,7 +4,7 @@ import GreenTickIcon from "../../../assets/GreenTickIcon.png";
 
 function CustomerReviewCard() {
   return (
-    <div className="w-[27%] border border-gray-200 rounded-lg p-4 mt-6 mb-6">
+    <div className=" border focus:blur-0 border-gray-200 rounded-lg m-4 p-4 mt-6 mb-6">
       <div className="flex">
         <ReactStars
           size={20}
@@ -21,7 +21,7 @@ function CustomerReviewCard() {
         <img src={GreenTickIcon} alt="greenTick  " />
       </div>
       <div>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-gray-500 w-60">
           "I'm blown away by the quality and style of the clothes I received
           from Shop.co. From casual wear to elegant dresses, every piece I've
           bought has exceeded my expectations.
