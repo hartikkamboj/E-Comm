@@ -1,5 +1,5 @@
 import React from "react";
-import FooterView from "../../View/Footer";
+import FooterView from "../View";
 
 function FooterContainer() {
   return (

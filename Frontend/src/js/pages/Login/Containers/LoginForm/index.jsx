@@ -12,7 +12,34 @@ function loginFormContainer() {
       navigate("/");
     }
   }, []);
-
+  const alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
   const navigate = useNavigate();
   const email = useRef("");
   const password = useRef("");
@@ -23,9 +50,7 @@ function loginFormContainer() {
   };
 
   const handleFormData = (email, password) => {
-    console.log(email.password);
     email = email.toLowerCase();
-
     if (
       email[0] >= "a" &&
       email[0] <= "z" &&
@@ -37,77 +62,42 @@ function loginFormContainer() {
       email[email.indexOf(".") + 1] >= "a" &&
       email[email.indexOf(".") + 1] <= "z"
     ) {
-      console.log(password.length);
-      if (
-        password.length > 8 &&
-        password.includes(["A" - "Z"]) &&
-        password.includes(["a" - "z"]) &&
-        password.includes([1 - 9]) &&
-        password.includes(
-          "[" ||
-            "!" ||
-            "@" ||
-            "£" ||
-            "$" ||
-            "%" ||
-            "^" ||
-            "&" ||
-            "*" ||
-            "(" ||
-            ")" ||
-            "_" ||
-            "-" ||
-            "=" ||
-            "+" ||
-            "[" ||
-            "]" ||
-            "{" ||
-            "}" ||
-            "||" ||
-            "." ||
-            "/" ||
-            '"' ||
-            '"' ||
-            "*" ||
-            "`" ||
-            "~"
-        )
-      ) {
+      if (password.length > 8) {
+        // password.includes(["a" - "z"]) &&
+        // password.includes([1 - 9]) &&
+        // password.includes(
+        //   "[" ||
+        //     "!" ||
+        //     "@" ||
+        //     "£" ||
+        //     "$" ||
+        //     "%" ||
+        //     "^" ||
+        //     "&" ||
+        //     "*" ||
+        //     "(" ||
+        //     ")" ||
+        //     "_" ||
+        //     "-" ||
+        //     "=" ||
+        //     "+" ||
+        //     "[" ||
+        //     "]" ||
+        //     "{" ||
+        //     "}" ||
+        //     "||" ||
+        //     "." ||
+        //     "/" ||
+        //     '"' ||
+        //     '"' ||
+        //     "*" ||
+        //     "`" ||
+        //     "~"
+        // )
         handleLoginData(email, password);
       } else {
-        console.log(
-          password.includes([1 - 9]),
-          password.includes(
-            "[" ||
-              "!" ||
-              "@" ||
-              "£" ||
-              "$" ||
-              "%" ||
-              "^" ||
-              "&" ||
-              "*" ||
-              "(" ||
-              ")" ||
-              "_" ||
-              "-" ||
-              "=" ||
-              "+" ||
-              "[" ||
-              "]" ||
-              "{" ||
-              "}" ||
-              "||" ||
-              "." ||
-              "/" ||
-              '"' ||
-              '"' ||
-              "*" ||
-              "`" ||
-              "~"
-          )
-        );
-        console.log(password);
+        password.includes();
+
         alert("password must be atleast 8 letters");
       }
     } else {

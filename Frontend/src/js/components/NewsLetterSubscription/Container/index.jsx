@@ -1,5 +1,5 @@
 import React from "react";
-import NewsLetterSubscriptionView from "../../View/NewsLetterSubscription";
+import NewsLetterSubscriptionView from "../View";
 
 function NewsLetterSubscriptionContainer() {
   return (

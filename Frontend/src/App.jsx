@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Home from "./js/pages/Home/index";
 import Login from "./js/pages/Login/index";
-import ProductDetails from "./components/ProductDetailsPage";
+import ProductDetails from "./js/pages/ProductDetails/index";
 
 function App() {
   const route = createBrowserRouter(
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/ProductDetails" element={<ProductDetails />} />
+        <Route path="/home/product/:id" element={<ProductDetails />} />
       </Route>
     )
   );

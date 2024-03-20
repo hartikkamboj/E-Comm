@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function CustomersReviewsView() {
+function CustomersReviewsView({ state }) {
   const settings = {
     className: "center",
     centerMode: true,
@@ -15,10 +15,8 @@ function CustomersReviewsView() {
     slidesToShow: 3,
     speed: 500,
     slidesToShow: 3,
+    dots: true,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
     cssEase: "linear",
   };
   return (
@@ -34,15 +32,9 @@ function CustomersReviewsView() {
       </div>
       <div className="w-88">
         <Slider {...settings}>
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
-          <CustomerReviewCard />
+          {state.customerReviewData?.map((review) => {
+            return <CustomerReviewCard review={review} key={review.id} />;
+          })}
         </Slider>
       </div>
     </>

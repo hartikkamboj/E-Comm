@@ -74,7 +74,7 @@ function loginFormView({ state, handlers }) {
                   <div className="flex h-8 border shadow-sm pl-2 rounded-md mb-1">
                     <input
                       className=" w-full text-sm focus:outline-none"
-                      type="password"
+                      type="text"
                       name="password"
                       id="current-password"
                       placeholder="Enter your password"

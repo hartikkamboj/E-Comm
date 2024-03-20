@@ -1,35 +1,181 @@
-const Products = [
+const products = [
   {
     Id: "Pro-1",
-    Image: "BlackShirt.png",
-    Name: "T-SHIRT WITH TAPE DETAILS",
-    Rating: "4.5",
-    Price: "200",
-    offerPrice: "120",
-  },
-  {
-    Id: "Pro-2",
-    Image: "jeans1.png",
+    Image: ["jeans1.png", "jeans1.png", "jeans1.png", "jeans1.png"],
     Name: "SKINNY FIT JEANS",
     Rating: "3.5",
     Price: "260",
     offerPrice: "240",
+    Size: ["small", "medium", "large", "NotAvilable"],
+    Reviews: [
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+    ],
+  },
+  {
+    Id: "Pro-2",
+    Image: [
+      "BlackShirt.png",
+      "BlackShirt.png",
+      "BlackShirt.png",
+      "BlackShirt.png",
+    ],
+    Name: "T-SHIRT WITH TAPE DETAILS",
+    Rating: "4.5",
+    Price: "200",
+    offerPrice: "120",
+    Size: ["small", "NotAvilable", "large", "NotAvilable"],
+    Reviews: [
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+    ],
   },
   {
     Id: "Pro-3",
-    Image: "jeans1.png",
-    Name: "CHECKERED SHIRT",
-    Rating: "4.5",
-    Price: "220",
-    offerPrice: "180",
-  },
-  {
-    Id: "Pro-4",
-    Image: "jeans1.png",
+    Image: [
+      "OrangeShirt.png",
+      "OrangeShirt.png",
+      "OrangeShirt.png",
+      "OrangeShirt.png",
+    ],
     Name: "SLEEVE STRIPED T-SHIRT",
     Rating: "4.5",
     Price: "160",
     offerPrice: "130",
+    Size: ["small", "medium", "large", "NotAvilable"],
+    Reviews: [
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+    ],
+  },
+  {
+    Id: "Pro-4",
+    Image: ["redShirt.png", "redShirt.png", "redShirt.png", "redShirt.png"],
+    Name: "CHECKERED SHIRT",
+    Rating: "4.5",
+    Price: "220",
+    offerPrice: "180",
+    Size: ["small", "medium", "large", "NotAvilable"],
+    Reviews: [
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+      {
+        name: "et omnis dolorem",
+        body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+      },
+    ],
   },
 ];
 
@@ -116,4 +262,57 @@ const users = [
   },
 ];
 
-module.exports = { Products, users };
+const customerReviews = [
+  {
+    id: "r - 1",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 2",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 3",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 4",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 5",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 6",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 7",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 8",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 9",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+  {
+    id: "r - 1",
+    name: "et omnis dolorem",
+    body: "ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque",
+  },
+];
+
+module.exports = { products, users, customerReviews };

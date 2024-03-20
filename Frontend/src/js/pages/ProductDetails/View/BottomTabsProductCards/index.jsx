@@ -1,7 +1,7 @@
 import React from "react";
 import ShopingSectionView from "../../../../components/ProductCard";
 
-function NewArrivalsView({ heading, data }) {
+function BottomTabsProductCardView({ heading, data }) {
   return (
     <div className="p-16">
       <div className="w-full text-center text-4xl font-black p-8 ">
@@ -32,4 +32,4 @@ function NewArrivalsView({ heading, data }) {
   );
 }
 
-export default NewArrivalsView;
+export default BottomTabsProductCardView;

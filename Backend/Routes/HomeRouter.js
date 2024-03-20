@@ -1,7 +1,7 @@
 const express = require("express");
-const HomeRouter = express.Router();
+const homeRouter = express.Router();
 const { userVerifier } = require("../middleWares/userVerifier");
-const { users, Products } = require("../dummyData");
+const { users, products } = require("../dummyData");
 const jwt = require("jsonwebtoken");
 const {
   tokenExtracter,
@@ -9,13 +9,13 @@ const {
 } = require("../middleWares/TokenExtracter");
 const secretkey = "30HA2002";
 
-HomeRouter.post("/", userVerifier, (req, res) => {
+homeRouter.post("/", userVerifier, (req, res) => {
   jwt.sign(req.body.email, secretkey, (err, token) => {
     res.send(token);
   });
 });
 
-HomeRouter.get("/verify", tokenExtracter, tokenVerifier, (req, res) => {
+homeRouter.get("/verify", tokenExtracter, tokenVerifier, (req, res) => {
   const verifier = users.find((user) => req.token == user.email);
   if (verifier) {
     res.send("verified");
@@ -24,7 +24,7 @@ HomeRouter.get("/verify", tokenExtracter, tokenVerifier, (req, res) => {
   }
 });
 
-HomeRouter.get("/data", (req, res) => {
-  res.json(Products);
+homeRouter.get("/data", (req, res) => {
+  res.json(products);
 });
-module.exports = { HomeRouter };
+module.exports = { homeRouter };

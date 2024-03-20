@@ -1,9 +1,10 @@
 import React from "react";
+import FooterContainer from "./Container";
 
 function Footer() {
   return (
     <div>
-      <h1>Footer</h1>
+      <FooterContainer />
     </div>
   );
 }
