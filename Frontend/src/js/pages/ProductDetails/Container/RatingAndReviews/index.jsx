@@ -1,14 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import RatingAndReviewsView from "../../View/RatingAndReviews";
-import { useSelector } from "react-redux";
+import ProductReviewsContext from "../../../../core/Context/ProductReviewsContext";
 
 function RatingAndReviewsContainer() {
-  const currentProductReviews = useSelector(
-    (state) => state.product[0].Reviews
-  );
-  const state = {
-    currentProductReviews,
-  };
+  const {productDetailGlobalData} = useContext(ProductReviewsContext);
+  const state = { productDetailGlobalData};
   const handlers = {};
   return (
     <div>

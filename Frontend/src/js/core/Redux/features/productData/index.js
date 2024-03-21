@@ -1,19 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  product: {},
+  userEmail: "",
+  Count: {},
+  cartData: [],
 };
 
 export const productDataSeter = createSlice({
   name: "currentProductData",
   initialState,
   reducers: {
-    addProductData: (state, action) => {
-      state.product = action.payload;
+    setUserEmail: (state, action) => {
+      state.userEmail = action.payload;
+    },
+    setCount: (state, action) => {},
+    setCartData: (state, action) => {
+      state.cartData.push(action.payload);
     },
   },
 });
 
-export const { addProductData } = productDataSeter.actions;
+export const { setUserEmail, setCount, setCartData } = productDataSeter.actions;
 
 export default productDataSeter.reducer;

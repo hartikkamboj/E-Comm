@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProductDetailsInBottemTabContainer from "../../Container/ProductDetailsInBottemTabs";
 import RatingAndReviewsContainer from "../../Container/RatingAndReviews";
 import FaqsContainer from "../../Container/FAQs";
+import ProductReviewsContext from "../../../../core/Context/ProductReviewsContext";
 
 function BottemTabsView({ state, handlers }) {
   return (

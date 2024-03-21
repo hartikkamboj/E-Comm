@@ -1,18 +1,24 @@
 import React, { useEffect, useRef } from "react";
+import axios from "axios";
 import LoginFormView from "../../Views/LoginForm";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUserEmail } from "../../../../core/Redux/features/productData";
 
 function loginFormContainer() {
+  const dispatch = useDispatch();
   useEffect(() => {
     //   handleTokenVerifier();
-    console.log(localStorage.getItem("uid"));
     if (localStorage.getItem("uid") !== null) {
       navigate("/home");
     } else {
       navigate("/");
     }
   }, []);
-  const alphabet = [
+  let lowerCaseaAlphabetCounter = 0;
+  let upperCaseAlphbetCounter = 0;
+  let specialCharactersCounter = 0;
+  const lowerCaseAlphabet = [
     "a",
     "b",
     "c",
@@ -40,13 +46,81 @@ function loginFormContainer() {
     "y",
     "z",
   ];
+
+  const upperCaseAlphbet = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
+  const specialCharacters = [
+    "[",
+    "!",
+    "@",
+    "£",
+    "$",
+    "%",
+    "^",
+    "&",
+    "*",
+    "(",
+    ")",
+    "_",
+    "-",
+    "=",
+    "+",
+    "[",
+    "]",
+    "{",
+    "}",
+    ",",
+    ".",
+    "/",
+    '"',
+    '"',
+    "*",
+    "`",
+    "~",
+  ];
   const navigate = useNavigate();
   const email = useRef("");
   const password = useRef("");
 
   const handleLoginData = async (email, password) => {
-    const response = await LoginDataHandler(email, password);
-    localStorage.setItem("uid", response.data);
+    const response = await axios.post("http://localhost:3001/", {
+      email,
+      password,
+    });
+    if (response.data == "not allowed") {
+      alert("create account");
+    } else {
+      localStorage.setItem("uid", response.data);
+      dispatch(setUserEmail(email));
+      navigate("/home");
+    }
   };
 
   const handleFormData = (email, password) => {
@@ -63,41 +137,35 @@ function loginFormContainer() {
       email[email.indexOf(".") + 1] <= "z"
     ) {
       if (password.length > 8) {
-        // password.includes(["a" - "z"]) &&
-        // password.includes([1 - 9]) &&
-        // password.includes(
-        //   "[" ||
-        //     "!" ||
-        //     "@" ||
-        //     "£" ||
-        //     "$" ||
-        //     "%" ||
-        //     "^" ||
-        //     "&" ||
-        //     "*" ||
-        //     "(" ||
-        //     ")" ||
-        //     "_" ||
-        //     "-" ||
-        //     "=" ||
-        //     "+" ||
-        //     "[" ||
-        //     "]" ||
-        //     "{" ||
-        //     "}" ||
-        //     "||" ||
-        //     "." ||
-        //     "/" ||
-        //     '"' ||
-        //     '"' ||
-        //     "*" ||
-        //     "`" ||
-        //     "~"
-        // )
-        handleLoginData(email, password);
+        for (let i = 0; i < lowerCaseAlphabet.length; i++) {
+          if (password.includes(lowerCaseAlphabet[i])) {
+            lowerCaseaAlphabetCounter = 1;
+          }
+        }
+        if (lowerCaseaAlphabetCounter == 0) {
+          alert("must contain lowercase letters");
+        } else {
+          for (let i = 0; i < upperCaseAlphbet.length; i++) {
+            if (password.includes(upperCaseAlphbet[i])) {
+              upperCaseAlphbetCounter = 1;
+            }
+          }
+          if (upperCaseAlphbetCounter == 0) {
+            alert("must contain uppercase letters");
+          } else {
+            for (let i = 0; i < specialCharacters.length; i++) {
+              if (password.includes(specialCharacters[i])) {
+                specialCharactersCounter = 1;
+              }
+            }
+            if (specialCharactersCounter == 0) {
+              alert("must contain specialCharacters");
+            } else {
+              handleLoginData(email, password);
+            }
+          }
+        }
       } else {
-        password.includes();
-
         alert("password must be atleast 8 letters");
       }
     } else {

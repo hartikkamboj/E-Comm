@@ -9,9 +9,9 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
         .map((data) => {
           return (
             <>
-              <div key={data.Id} className="p-20 flex">
-                <div className="flex w-1/2">
-                  <div className="w-1/5 ml-5 mr-5">
+              <div key={data.Id} className="p-20 lg:flex ">
+                <div className="flex lg:w-1/2 lg:flex-row flex-col-reverse ">
+                  <div className="lg:block flex w-1/5 lg:ml-5 lg:mr-5">
                     <img
                       className="w-full m-2 "
                       src={`http://localhost:3001/${data.Image[0]}`}
@@ -36,7 +36,7 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                     />
                   </div>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                   <h1 className="text-4xl font-black pb-">{data.Name}</h1>
 
                   <div className="flex items-center pb-3">
@@ -76,6 +76,10 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                           </button>
                         ) : (
                           <button
+                            onClick={() => {
+                              handlers.setSizeSelector(state.sizeArray[index]);
+                              console.log(state.sizeSelector);
+                            }}
                             key={index}
                             name="small"
                             className="mr-5 text-sm p-2 w-1/6 rounded-full bg-black text-white"
@@ -169,7 +173,19 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                       </button>
                     </div>
                     <div className="w-full pl-4">
-                      <button className="mr-5 text-sm p-2 w-3/5 rounded-full bg-black text-white">
+                      <button
+                        onClick={() =>
+                          handlers.dispatch(
+                            handlers.setCartData({
+                              "product-Id": id,
+                              name: data.Name,
+                              size: state.sizeSelector,
+                              price: data.offerPrice,
+                            })
+                          )
+                        }
+                        className="mr-5 text-sm p-2 w-3/5 rounded-full bg-black text-white"
+                      >
                         Add to cart
                       </button>
                     </div>

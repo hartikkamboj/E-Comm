@@ -181,8 +181,8 @@ const products = [
 
 const users = [
   {
-    email: "user1@example.com",
-    password: "password1",
+    email: "hartikkamboj11@gmail.com",
+    password: "123456Hk@",
   },
   {
     email: "user2@example.com",
