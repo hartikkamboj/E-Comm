@@ -7,6 +7,7 @@ import {
 import Home from "./js/pages/Home/index";
 import Login from "./js/pages/Login/index";
 import ProductDetails from "./js/pages/ProductDetails/index";
+import CategoryCausal from "./js/pages/Category-Causal";
 
 function App() {
   const route = createBrowserRouter(
@@ -16,6 +17,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home/product/:id" element={<ProductDetails />} />
+        <Route path="/home/Causal" element={<CategoryCausal />} />
       </Route>
     )
   );

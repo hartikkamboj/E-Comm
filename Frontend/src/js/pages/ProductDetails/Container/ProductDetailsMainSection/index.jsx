@@ -12,7 +12,7 @@ function ProductDetaisContaier() {
   const dispatch = useDispatch();
   const params = useParams();
   const [data, setData] = useState([]);
-  const [sizeSelector, setSizeSelector] = useState("");
+  const [sizeSelector, setSizeSelector] = useState(" ");
   const [count, setCount] = useState(0);
   const sizeArray = ["Small", "Medium ", "Large", "Xlarge"];
   const [sizeContainer, setSizeContainer] = useState("");

@@ -25,44 +25,55 @@ function FooterView() {
             <img src={GitIcon} className="m-2" alt="GitLogo" />
           </div>
         </div>
-        <div className="flex justify-evenly w-2/3">
-          <div>
-            <p className="font-bold pb-4  ">Company</p>
-            <ul>
-              <li className="pb-3 text-sm text-gray-500">About</li>
-              <li className="pb-3 text-sm text-gray-500">Features</li>
-              <li className="pb-3 text-sm text-gray-500">Works</li>
-              <li className="pb-3 text-sm text-gray-500">Career</li>
-            </ul>
+        <div className="lg:flex block lg:justify-evenly lg:w-2/3 w-full justify-between">
+          <div className="flex ">
+            <div>
+              <p className="font-bold pb-4  ">Company</p>
+              <ul>
+                <li className="pb-3 text-sm text-gray-500">About</li>
+                <li className="pb-3 text-sm text-gray-500">Features</li>
+                <li className="pb-3 text-sm text-gray-500">Works</li>
+                <li className="pb-3 text-sm text-gray-500">Career</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold pb-4 ">Help</p>
+              <ul>
+                <li className="pb-3 text-sm text-gray-500">
+                  {" "}
+                  Customer Support
+                </li>
+                <li className="pb-3 text-sm text-gray-500">Delivery Details</li>
+                <li className="pb-3 text-sm text-gray-500">
+                  Terms & Conditions
+                </li>
+                <li className="pb-3 text-sm text-gray-500"> Privacy Policy</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <p className="font-bold pb-4 ">Help</p>
-            <ul>
-              <li className="pb-3 text-sm text-gray-500"> Customer Support</li>
-              <li className="pb-3 text-sm text-gray-500">Delivery Details</li>
-              <li className="pb-3 text-sm text-gray-500">Terms & Conditions</li>
-              <li className="pb-3 text-sm text-gray-500"> Privacy Policy</li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-bold pb-4 ">FAQ</p>
-            <ul>
-              <li className="pb-3 text-sm text-gray-500">Account</li>
-              <li className="pb-3 text-sm text-gray-500">Manage Deliveries</li>
-              <li className="pb-3 text-sm text-gray-500">Orders</li>
-              <li className="pb-3 text-sm text-gray-500">Payments</li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-bold pb-4 ">Resources</p>
-            <ul>
-              <li className="pb-3 text-sm text-gray-500"> Free eBooks</li>
-              <li className="pb-3 text-sm text-gray-500">
-                Development Tutorial
-              </li>
-              <li className="pb-3 text-sm text-gray-500">How to - Blog</li>
-              <li className="pb-3 text-sm text-gray-500">Youtube Playlist</li>
-            </ul>
+          <div className="flex">
+            <div>
+              <p className="font-bold pb-4 ">FAQ</p>
+              <ul>
+                <li className="pb-3 text-sm text-gray-500">Account</li>
+                <li className="pb-3 text-sm text-gray-500">
+                  Manage Deliveries
+                </li>
+                <li className="pb-3 text-sm text-gray-500">Orders</li>
+                <li className="pb-3 text-sm text-gray-500">Payments</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold pb-4 ">Resources</p>
+              <ul>
+                <li className="pb-3 text-sm text-gray-500"> Free eBooks</li>
+                <li className="pb-3 text-sm text-gray-500">
+                  Development Tutorial
+                </li>
+                <li className="pb-3 text-sm text-gray-500">How to - Blog</li>
+                <li className="pb-3 text-sm text-gray-500">Youtube Playlist</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

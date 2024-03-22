@@ -9,26 +9,26 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
         .map((data) => {
           return (
             <>
-              <div key={data.Id} className="p-20 lg:flex ">
-                <div className="flex lg:w-1/2 lg:flex-row flex-col-reverse ">
-                  <div className="lg:block flex w-1/5 lg:ml-5 lg:mr-5">
+              <div key={data.Id} className="lg:p-20 p-8 lg:flex ">
+                <div className="flex w-full lg:w-1/2 lg:flex-row flex-col-reverse ">
+                  <div className="lg:block flex lg:w-1/5 w-1/3 lg:ml-5 lg:mr-5">
                     <img
-                      className="w-full m-2 "
+                      className="w-full mr-2 mt-2 "
                       src={`http://localhost:3001/${data.Image[0]}`}
                       alt="SideImageSection"
                     />
                     <img
-                      className="w-full m-2"
+                      className="w-full mr-2 mt-2"
                       src={`http://localhost:3001/${data.Image[1]}`}
                       alt="MainImageSection"
                     />
                     <img
-                      className="w-full m-2"
+                      className="w-full mr-2 mt-2"
                       src={`http://localhost:3001/${data.Image[2]}`}
                       alt="SideImageSection"
                     />
                   </div>
-                  <div className="h-full w-4/6">
+                  <div className="h-full lg:w-4/6 w-full">
                     <img
                       className="w-full h-full"
                       src={`http://localhost:3001/${data.Image[3]}`}
@@ -37,7 +37,9 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                   </div>
                 </div>
                 <div className="lg:w-1/2">
-                  <h1 className="text-4xl font-black pb-">{data.Name}</h1>
+                  <h1 className="lg:text-4xl text-2xl font-black pb-">
+                    {data.Name}
+                  </h1>
 
                   <div className="flex items-center pb-3">
                     <ReactStars
@@ -63,14 +65,14 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                   <hr />
                   <div className="pb-3 pt-3">
                     <p className=" text-sm text-gray-500">Choose Size</p>
-                    <div className="mt-4   mb-4">
+                    <div className="mt-4 flex lg:justify-start justify-center   mb-4">
                       {data.Size.map((size, index) => {
                         return size == "NotAvilable" ? (
                           <button
                             key={index}
                             disabled
                             name="small"
-                            className="mr-5 text-sm p-2  w-1/6 rounded-full bg-[#F2F0F1] text-gray-500"
+                            className="lg:mr-5 mr-2text-sm p-2  lg:w-1/6 w-1/5 rounded-full bg-[#F2F0F1] text-gray-500"
                           >
                             {state.sizeArray[index]}
                           </button>
@@ -78,11 +80,10 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                           <button
                             onClick={() => {
                               handlers.setSizeSelector(state.sizeArray[index]);
-                              console.log(state.sizeSelector);
                             }}
                             key={index}
                             name="small"
-                            className="mr-5 text-sm p-2 w-1/6 rounded-full bg-black text-white"
+                            className="lg:mr-5  mr-2 text-sm p-2 lg:w-1/6 w-1/5 rounded-full bg-black text-white"
                           >
                             {state.sizeArray[index]}
                           </button>
@@ -157,7 +158,7 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                   </div>
                   <hr />
                   <div className="flex w-full pt-5">
-                    <div className="flex border items-center justify-around w-1/4 rounded-full bg-Background-color">
+                    <div className="flex border items-center justify-around lg:w-1/4 w-1/2 rounded-full bg-Background-color">
                       <button
                         className="w-1/3"
                         onClick={handlers.cartProductsNumberDecrementer}
@@ -174,17 +175,23 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                     </div>
                     <div className="w-full pl-4">
                       <button
-                        onClick={() =>
-                          handlers.dispatch(
-                            handlers.setCartData({
-                              "product-Id": id,
-                              name: data.Name,
-                              size: state.sizeSelector,
-                              price: data.offerPrice,
-                            })
-                          )
-                        }
-                        className="mr-5 text-sm p-2 w-3/5 rounded-full bg-black text-white"
+                        onClick={() => {
+                          if (state.sizeSelector == " ") {
+                            alert("select size first");
+                          } else {
+                            handlers.dispatch(
+                              handlers.setCartData({
+                                "product-Id": id,
+                                name: data.Name,
+                                size: state.sizeSelector,
+                                price: data.offerPrice,
+                              })
+                            );
+                            handlers.setSizeSelector(" ");
+                            alert("Added");
+                          }
+                        }}
+                        className="lg:mr-5 text-sm p-2 lg:w-3/5 w-full rounded-full bg-black text-white"
                       >
                         Add to cart
                       </button>

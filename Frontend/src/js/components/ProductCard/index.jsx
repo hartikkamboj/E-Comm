@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function ShopingSectionView({ Id, Image, Name, Rating, Price }) {
   return (
-    <div className=" w-80 lg:w-1/4 p-8">
+    <div className=" p-8">
       <Link to={`/home/product/${Id}`}>
         <div className="flex justify-around w-full ">
           <div className="w-full">

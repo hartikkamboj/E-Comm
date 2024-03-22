@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function DressFiltersView() {
   return (
@@ -7,11 +8,13 @@ function DressFiltersView() {
         <h1 className="text-4xl font-black pb-14">BROWSE BY DRESS STYLE</h1>
         <div>
           <div className="lg:flex w-full justify-center">
-            <img
-              className="m-2 lg:w-1/3 w-full "
-              src={`http://localhost:3001/Casual.png`}
-              alt="image1"
-            />
+            <Link to="/home/Causal" className="m-2 lg:w-1/3 w-full">
+              <img
+                className=" w-full h-full  "
+                src={`http://localhost:3001/Casual.png`}
+                alt="image1"
+              />
+            </Link>
             <img
               className="m-2 lg:w-2/3 w-full"
               src={`http://localhost:3001/Formal.png`}

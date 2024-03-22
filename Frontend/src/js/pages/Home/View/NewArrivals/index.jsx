@@ -12,14 +12,16 @@ function NewArrivalsView({ heading, data }) {
           data.length &&
           data.map((data) => {
             return (
-              <ShopingSectionView
-                key={data.Id}
-                Id={data.Id}
-                Image={`http://localhost:3001/${data.Image[0]}`}
-                Name={data.Name}
-                Rating={data.Rating}
-                Price={data.Price}
-              />
+              <div className="lg:w-1/4 w-1/2">
+                <ShopingSectionView
+                  key={data.Id}
+                  Id={data.Id}
+                  Image={`http://localhost:3001/${data.Image[0]}`}
+                  Name={data.Name}
+                  Rating={data.Rating}
+                  Price={data.Price}
+                />
+              </div>
             );
           })}
       </div>
