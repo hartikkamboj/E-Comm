@@ -19,8 +19,7 @@ function ProductDetaisContaier() {
 
   useEffect(() => {
     productsDataHandler();
-  }, []);
-  setCartData;
+  }, [params.id]);
 
   // useMemo(() => {
   //   dispatch(addProductData(data));

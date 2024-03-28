@@ -7,6 +7,9 @@ const products = [
     Price: "260",
     offerPrice: "240",
     Size: ["small", "medium", "large", "NotAvilable"],
+    Gender: "male",
+    category: "jeans",
+    DressType: "casual",
     Reviews: [
       {
         name: "et omnis dolorem",
@@ -51,6 +54,9 @@ const products = [
     Price: "200",
     offerPrice: "120",
     Size: ["small", "NotAvilable", "large", "NotAvilable"],
+    Gender: "both",
+    category: "T-shirts",
+    DressType: "casual",
     Reviews: [
       {
         name: "et omnis dolorem",
@@ -99,6 +105,9 @@ const products = [
     Price: "160",
     offerPrice: "130",
     Size: ["small", "medium", "large", "NotAvilable"],
+    Gender: "female",
+    category: "T-shirt",
+    DressType: "party",
     Reviews: [
       {
         name: "et omnis dolorem",
@@ -142,6 +151,9 @@ const products = [
     Price: "220",
     offerPrice: "180",
     Size: ["small", "medium", "large", "NotAvilable"],
+    Gender: "male",
+    category: "shirt",
+    DressType: "formal",
     Reviews: [
       {
         name: "et omnis dolorem",

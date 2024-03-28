@@ -9,7 +9,7 @@ function RatingAndReviewsView({ state, handlers }) {
         <div className="flex pl-16 pr-16">
           <div className="flex items-center w-1/3 lg:text-lg text-xs">
             <p>All Reviews</p>
-            <p className="text-xs">({state.productDetailGlobalData.length})</p>
+            <p className="text-xs">({state.productDetailGlobalData?.length})</p>
           </div>
           <div className="w-2/3">
             <div className="flex justify-end">

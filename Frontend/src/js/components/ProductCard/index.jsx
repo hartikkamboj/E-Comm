@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ShopingSectionView({ Id, Image, Name, Rating, Price }) {
+function ProductCard({ Id, Image, Name, Rating, Price }) {
   return (
-    <div className=" p-8">
+    <div className=" px-4 py-2">
       <Link to={`/home/product/${Id}`}>
         <div className="flex justify-around w-full ">
           <div className="w-full">
@@ -29,4 +29,4 @@ function ShopingSectionView({ Id, Image, Name, Rating, Price }) {
   );
 }
 
-export default ShopingSectionView;
+export default ProductCard;
