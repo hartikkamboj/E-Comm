@@ -1,19 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import FilterView from "../../View/Filter";
 import axios from "axios";
+import FilteredDataContext from "../../../../core/Context/Category/index";
 
-function FilterContainer() {
+function FilterContainer({ category }) {
+  const { setFilteredDataContainer } = useContext(FilteredDataContext);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(1000);
   const [selectedDressTypeList, setSelectedDressTypeList] = useState([]);
   const [selectedSizeList, setSelectedSizeList] = useState([]);
   const [selectedDressStyle, setSelectedDressStyle] = useState("");
   const [selectedFilters, setSelectedFilters] = useState({
-    dressType: [],
-    minPrice: "",
-    maxPrice: "",
-    size: [],
-    dressStyle: "",
+    dressType: ["All"],
+    minPrice: "0",
+    maxPrice: "1000",
+    size: ["All"],
+    dressStyle: { category },
   });
 
   useEffect(() => {
@@ -21,11 +23,10 @@ function FilterContainer() {
   }, [selectedFilters]);
 
   const filterHandler = async (DataRequiredForFilteration) => {
-    const res = await axios.get("http://localhost:3001/filters", {
-      headers: {
-        DataRequiredForFilteration,
-      },
+    const res = await axios.post("http://localhost:3001/filters", {
+      DataRequiredForFilteration,
     });
+    setFilteredDataContainer(res.data);
   };
 
   const dataCollecter = (

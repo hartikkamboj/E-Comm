@@ -5,11 +5,11 @@ const products = [
     Name: "SKINNY FIT JEANS",
     Rating: "3.5",
     Price: "260",
-    offerPrice: "240",
-    Size: ["small", "medium", "large", "NotAvilable"],
+    offerPrice: "2400",
+    Size: ["Small", "Medium", "Large", "NotAvilable"],
     Gender: "male",
-    category: "jeans",
-    DressType: "casual",
+    DressType: "Jeans",
+    DressStyle: "Casual",
     Reviews: [
       {
         name: "et omnis dolorem",
@@ -53,10 +53,10 @@ const products = [
     Rating: "4.5",
     Price: "200",
     offerPrice: "120",
-    Size: ["small", "NotAvilable", "large", "NotAvilable"],
+    Size: ["NotAvilable", "NotAvilable", "Large", "NotAvilable"],
     Gender: "both",
-    category: "T-shirts",
-    DressType: "casual",
+    DressType: "T-shirts",
+    DressStyle: "Casual",
     Reviews: [
       {
         name: "et omnis dolorem",
@@ -104,10 +104,10 @@ const products = [
     Rating: "4.5",
     Price: "160",
     offerPrice: "130",
-    Size: ["small", "medium", "large", "NotAvilable"],
+    Size: ["Small", "Medium", "Large", "NotAvilable"],
     Gender: "female",
-    category: "T-shirt",
-    DressType: "party",
+    DressType: "T-shirts",
+    DressStyle: "Party",
     Reviews: [
       {
         name: "et omnis dolorem",
@@ -150,10 +150,10 @@ const products = [
     Rating: "4.5",
     Price: "220",
     offerPrice: "180",
-    Size: ["small", "medium", "large", "NotAvilable"],
+    Size: ["Small", "Medium", "Large", "NotAvilable"],
     Gender: "male",
-    category: "shirt",
-    DressType: "formal",
+    DressType: "Shirt",
+    DressStyle: "formal",
     Reviews: [
       {
         name: "et omnis dolorem",
