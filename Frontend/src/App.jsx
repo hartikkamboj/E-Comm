@@ -8,6 +8,7 @@ import Home from "./js/pages/Home/index";
 import Login from "./js/pages/Login/index";
 import ProductDetails from "./js/pages/ProductDetails/index";
 import CategoryCausal from "./js/pages/Category-Causal";
+import AddToCart from "./js/pages/AddToCart";
 
 function App() {
   const route = createBrowserRouter(
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home/product/:id" element={<ProductDetails />} />
         <Route path="/home/:category" element={<CategoryCausal />} />
+        <Route path="/home/product/cart" element={<AddToCart />} />
       </Route>
     )
   );

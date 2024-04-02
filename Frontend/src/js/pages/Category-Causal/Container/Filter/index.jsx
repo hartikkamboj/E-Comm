@@ -4,18 +4,19 @@ import axios from "axios";
 import FilteredDataContext from "../../../../core/Context/Category/index";
 
 function FilterContainer({ category }) {
-  const { setFilteredDataContainer } = useContext(FilteredDataContext);
+  const { setFilteredDataContainer, setCategory } =
+    useContext(FilteredDataContext);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(1000);
   const [selectedDressTypeList, setSelectedDressTypeList] = useState([]);
   const [selectedSizeList, setSelectedSizeList] = useState([]);
-  const [selectedDressStyle, setSelectedDressStyle] = useState("");
+  const [selectedDressStyle, setSelectedDressStyle] = useState(category);
   const [selectedFilters, setSelectedFilters] = useState({
     dressType: ["All"],
     minPrice: "0",
     maxPrice: "1000",
     size: ["All"],
-    dressStyle: { category },
+    dressStyle: selectedDressStyle,
   });
 
   useEffect(() => {
@@ -27,6 +28,7 @@ function FilterContainer({ category }) {
       DataRequiredForFilteration,
     });
     setFilteredDataContainer(res.data);
+    setCategory(category);
   };
 
   const dataCollecter = (

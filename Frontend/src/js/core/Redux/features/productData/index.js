@@ -17,9 +17,13 @@ export const productDataSeter = createSlice({
     setCartData: (state, action) => {
       state.cartData.push(action.payload);
     },
+    deleteCartData: (state, action) => {
+      state.cartData = action.payload;
+    },
   },
 });
 
-export const { setUserEmail, setCount, setCartData } = productDataSeter.actions;
+export const { setUserEmail, setCount, setCartData, deleteCartData } =
+  productDataSeter.actions;
 
 export default productDataSeter.reducer;

@@ -10,17 +10,23 @@ import { useParams } from "react-router-dom";
 function CategoryCausal() {
   const params = useParams();
   const [filteredDataContainer, setFilteredDataContainer] = useState([]);
+  const [category, setCategory] = useState("");
   return (
     <>
       <FilteredData.Provider
-        value={{ filteredDataContainer, setFilteredDataContainer }}
+        value={{
+          filteredDataContainer,
+          setFilteredDataContainer,
+          category,
+          setCategory,
+        }}
       >
         <Header />
-        <div className="flex pt-10">
-          <div className="w-1/5">
-            <FilterContainer category={params.category}/>
+        <div className="flex md:flex-row flex-col-reverse pt-10">
+          <div className="md:w-1/5  bg-white">
+            <FilterContainer category={params.category} />
           </div>
-          <div className="w-4/5">
+          <div className="w-4/5 md:block ">
             <CategoryCausalContainer />
           </div>
         </div>

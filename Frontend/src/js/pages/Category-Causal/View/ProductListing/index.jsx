@@ -1,11 +1,21 @@
 import React from "react";
 import ProductCard from "../../../../components/ProductCard";
+import FilterButton from "../../../../../assets/FilterButtonIcon.png";
 
 // import moduleName from ''
 function CategoryCausalView({ state }) {
   return (
     <>
-      <h1 className="text-3xl pl-10 font-bold">Casual</h1>
+      <div className="w-full flex">
+        <div className="w-1/2 flex justify-start">
+          <h1 className="text-3xl pl-10 font-bold">{state.category}</h1>
+        </div>
+        <div className=" md:hidden  w-1/2 flex justify-end pr-5">
+          <button className="">
+            <img className="w-full" src={FilterButton} alt="img" />
+          </button>
+        </div>
+      </div>
       <div className="w-full flex flex-wrap ">
         {state.filteredDataContainer.map((data) => {
           return (

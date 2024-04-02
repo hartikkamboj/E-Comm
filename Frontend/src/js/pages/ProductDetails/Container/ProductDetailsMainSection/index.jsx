@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import ProductDetailsMainSectionView from "../../View/ProductDetailsMainSection";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ProductDetailsContext from "../../../../core/Context/ProductReviewsContext";
 import { useDispatch, useSelector } from "react-redux";

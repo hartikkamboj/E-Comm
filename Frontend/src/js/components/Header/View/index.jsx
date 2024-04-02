@@ -5,7 +5,7 @@ import UserAccountIcon from "../../../../assets/userAccountIcon.png";
 import SearchIcon from "../../../../assets/searchBarIcon.png";
 import MenuIcon from "../../../../assets/menuIcon.png";
 
-function HeaderView() {
+function HeaderView({ state }) {
   return (
     <div className=" w-full flex justify-center items-center pt-4">
       <div className="w-full flex justify-center h-12">
@@ -43,7 +43,13 @@ function HeaderView() {
           </div>
         </div>
         <div className="flex w-20 justify-start m-2 items-center">
-          <img className="mr-3 w-6 h-6" src={CartIcon} alt="cartIcon" />
+          <button
+            onClick={() => {
+              state.navigate("/home/product/cart");
+            }}
+          >
+            <img className="mr-3 w-6 h-6" src={CartIcon} alt="cartIcon" />
+          </button>
           <img
             className="mr-3 w-6 h-6"
             src={UserAccountIcon}

@@ -3,10 +3,10 @@ import CategoryCausalView from "../../View/ProductListing";
 import FilteredDataContext from "../../../../core/Context/Category";
 
 function CategoryCausalContainer() {
-  const { filteredDataContainer } = useContext(FilteredDataContext);
-  console.log(filteredDataContainer);
+  const { filteredDataContainer, category } = useContext(FilteredDataContext);
   let state = {
     filteredDataContainer,
+    category
   };
   return (
     <div>

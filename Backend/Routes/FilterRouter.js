@@ -70,7 +70,7 @@ const dressStyleFilterHandler = (
   dataOnWhichFilterationApplied
 ) => {
   let dressStyleFilteredData = dataOnWhichFilterationApplied.filter(
-    (data) => data.DressStyle === dataThroughtWhichFilterationApplied.category
+    (data) => data.DressStyle === dataThroughtWhichFilterationApplied
   );
   return dressStyleFilteredData;
 };

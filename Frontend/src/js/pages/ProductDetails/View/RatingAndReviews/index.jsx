@@ -1,6 +1,6 @@
 import React from "react";
 import CustomerReviewCard from "../../../../components/CustomerReviewCard";
-import ReviewButtonIcon from "../../../../../assets/ReviewButtonIcon.png";
+import FilterButton from "../../../../../assets/FilterButtonIcon.png";
 
 function RatingAndReviewsView({ state, handlers }) {
   return (
@@ -14,7 +14,7 @@ function RatingAndReviewsView({ state, handlers }) {
           <div className="w-2/3">
             <div className="flex justify-end">
               <button className=" bg-Background-color p-2 rounded-2xl mr-2">
-                <img src={ReviewButtonIcon} alt="icon" />
+                <img src={FilterButton} alt="icon" />
               </button>
               <div className="lg:flex hidden">
                 <select

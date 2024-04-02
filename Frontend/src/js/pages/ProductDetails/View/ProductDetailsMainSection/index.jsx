@@ -181,14 +181,17 @@ function ProductDetailsMainSectionView({ id, state, handlers }) {
                           } else {
                             handlers.dispatch(
                               handlers.setCartData({
-                                "product-Id": id,
+                                product_Id: id,
+                                image: data.Image[0],
                                 name: data.Name,
                                 size: state.sizeSelector,
-                                price: data.offerPrice,
+                                offerPrice: data.offerPrice,
+                                price: data.Price,
+                                count: state.count,
                               })
                             );
+                            alert("added");
                             handlers.setSizeSelector(" ");
-                            alert("Added");
                           }
                         }}
                         className="lg:mr-5 text-sm p-2 lg:w-3/5 w-full rounded-full bg-black text-white"

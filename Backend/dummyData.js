@@ -5,7 +5,7 @@ const products = [
     Name: "SKINNY FIT JEANS",
     Rating: "3.5",
     Price: "260",
-    offerPrice: "2400",
+    offerPrice: "240",
     Size: ["Small", "Medium", "Large", "NotAvilable"],
     Gender: "male",
     DressType: "Jeans",
@@ -153,7 +153,7 @@ const products = [
     Size: ["Small", "Medium", "Large", "NotAvilable"],
     Gender: "male",
     DressType: "Shirt",
-    DressStyle: "formal",
+    DressStyle: "Formal",
     Reviews: [
       {
         name: "et omnis dolorem",

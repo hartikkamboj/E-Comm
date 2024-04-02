@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import FilterIcon from "../../../../../assets/ReviewButtonIcon.png";
+import FilterIcon from "../../../../../assets/FilterButtonIcon.png";
 import MultiRangeSlider from "multi-range-slider-react";
 function FilterView({ state, handlers }) {
   return (
-    <div className="p-4 border rounded-3xl m-4">
+    <div className="p-4 border rounded-3xl md:m-4">
       <div className="flex p-2">
         <div className="flex w-1/2 ">
           <h1 className=" font-medium text-xl">Filters</h1>
